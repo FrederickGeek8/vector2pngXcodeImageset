@@ -35,7 +35,7 @@ file name.
 var destFolder, sourceFolder, files, fileType, sourceDoc, targetFile, pngExportOpts;
 
 // Select the source folder.
-sourceFolder = Folder.selectDialog( 'Select the folder with Illustrator files you want to convert to PNG', '~' );
+sourceFolder = Folder.selectDialog( 'Select the folder with Illustrator file(s) you want to convert to PNG', '~' );
 
 // If a valid folder is selected
 if ( sourceFolder != null )
@@ -52,9 +52,16 @@ if ( sourceFolder != null )
         destFolder = Folder.selectDialog( 'Select the folder where you want to save the converted PNG files.', '~' );
         for ( i = 0; i < files.length; i++ )
         {
-            saveToRes(files[i], 100.0, '', '');
-            saveToRes(files[i], 200.0, '@2x', '');
-            saveToRes(files[i], 100.0, '', 'web');
+            saveToRes(files[i], 120.0, '@2x', 'iPhone');
+            saveToRes(files[i], 60.0, '', 'iPhone');
+            saveToRes(files[i], 152.0, '@2x', 'iPad');
+            saveToRes(files[i], 76.0, '', 'iPad');
+            saveToRes(files[i], 512.0, '', 'iTunesArtwork');
+            saveToRes(files[i], 1024.0, '', 'iTunesArtwork');
+            saveToRes(files[i], 80.0, '@2x', 'Spotlight');
+            saveToRes(files[i], 40.0, '', 'Spotlight');
+            saveToRes(files[i], 58.0, '@2x', 'Settings');
+            saveToRes(files[i], 29.0, '', 'Settings');
         }
         alert( 'Files are saved as PNG in ' + destFolder );
     }
@@ -141,7 +148,7 @@ function getPNGOptions(scale)
     // for a description of these properties.
     // Add more properties here if you like
     pngExportOpts.antiAliasing = true;
-    pngExportOpts.artBoardClipping = false;
+    pngExportOpts.artBoardClipping = true;
     pngExportOpts.horizontalScale = scale;
     //pngExportOpts.matte = true;
     //pngExportOpts.matteColor = 0, 0, 0;
