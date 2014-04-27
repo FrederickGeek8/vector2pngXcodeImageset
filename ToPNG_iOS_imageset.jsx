@@ -41,7 +41,7 @@ sourceFolder = Folder.selectDialog( 'Select the folder with Illustrator file(s) 
 if ( sourceFolder != null )
 {
     files = new Array();
-    fileType = prompt( 'Select type of Illustrator files to you want to process. Eg: *.ai', ' ' );
+    fileType = prompt( 'Select type of Illustrator files to you want to process. Eg: *.ai', '*.ai' );
 
     // Get all files matching the pattern
     files = sourceFolder.getFiles( fileType );
