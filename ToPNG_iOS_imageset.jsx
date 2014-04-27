@@ -56,8 +56,8 @@ if ( sourceFolder != null )
             saveToRes(files[i], 60.0, '', 'iPhone');
             saveToRes(files[i], 152.0, '@2x', 'iPad');
             saveToRes(files[i], 76.0, '', 'iPad');
+            saveToRes(files[i], 1024.0, '@2x', 'iTunesArtwork');
             saveToRes(files[i], 512.0, '', 'iTunesArtwork');
-            saveToRes(files[i], 1024.0, '', 'iTunesArtwork');
             saveToRes(files[i], 80.0, '@2x', 'Spotlight');
             saveToRes(files[i], 40.0, '', 'Spotlight');
             saveToRes(files[i], 58.0, '@2x', 'Settings');
